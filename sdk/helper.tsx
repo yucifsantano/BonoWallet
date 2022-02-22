@@ -68,9 +68,9 @@ export const getStyle = (styles, animatedStyles, depend) => useMemo(
 // navigation
 export const navigationRef = createNavigationContainerRef();
 
-export function navigate({name, params}:{name?:never, params?:never}) {
+export function navigate({name, params}:{name:never, params:never}) {
   if (navigationRef.isReady()) {
-    navigationRef.navigate(name, params);
+    navigationRef.navigate<never>(name, params);
   }
 }
 

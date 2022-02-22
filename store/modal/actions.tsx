@@ -2,7 +2,7 @@ import Types from '../modal/types';
 import { navigate } from '../../sdk/helper';
 import { SCREEN_NAMES } from '../../styles/constants';
 
-export const showModalAction = (data) => async (dispatch) => {
+export const showModalAction = (data:any) => async (dispatch:any) => {
   dispatch({
     type: Types.TOGGLE_MODAL,
     payload: {
