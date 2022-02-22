@@ -18,7 +18,7 @@ export const generateWalletAction = () => async (dispatch) => {
     let publicKey = undefined;
 
     // generate new wallet
-    await new Promise((resolve) => {
+    await new Promise((resolve?:any) => {
       setTimeout(() => {
         const result = createWallet();
         address = result.address;

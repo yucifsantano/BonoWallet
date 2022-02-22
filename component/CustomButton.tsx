@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TouchableOpacity, View, ActivityIndicator, StyleSheet } from 'react-native';
 
 import { CustomText } from './CustomText';
-import { active, greySecondary } from '../styles/color.theme';
+import { active, greySecondary, textDisable } from '../styles/color.theme';
 
 export function CustomButton({
   loading,
@@ -54,7 +54,7 @@ export function CustomButton({
           <CustomText
             size={textSize}
             type={"bold"}
-            color={textColor ? textColor : (type === "transparent") ? "greySecondary" : "textWhite"}
+            color={textColor ? textColor : (type === "transparent") ? "textDisable" : "textWhite"}
             align={"center"}
             style={textStyle}
           >

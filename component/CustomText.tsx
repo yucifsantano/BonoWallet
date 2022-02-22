@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 
-import { active, danger, success, textWhite, textWhite01, greySecondary, greyPrimary } from '../styles/color.theme';
+import { active, danger, success, textWhite, textWhite01, greySecondary, greyPrimary, textDisable } from '../styles/color.theme';
 
 export function CustomText({
   type,
@@ -32,6 +32,8 @@ export function CustomText({
 
   const setFontColor = (color) => {
     switch (color) {
+      case 'textDisable':
+        return textDisable;
       case 'greyPrimary':
         return greyPrimary;
       case 'greySecondary':
