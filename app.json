@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "scheme": "bonowallet",
+    "name": "BonoWallet",
+    "slug": "bonowallet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#161A1D"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "associatedDomains": ["applinks:bonowallet.com"],
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Access for wallet"
+      },
+      "bundleIdentifier": "com.ciericorp.bonowallet",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "intentFilters": [
+        {
+          "autoVerify": true,
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "https",
+              "host": "*.bonowallet.com",
+              "pathPrefix": "/*"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "package": "com.ciericorp.bonowallet",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+export const success = "#77C190";
+export const green = "#35C759";
+export const danger = "#d12a48";
+export const danger07 = "rgba(209, 42, 72, 0.7)";
+export const dark = "#777777"; //"#161A1D";
+export const lightDark = "#22272D";
+export const darkGrey = "#41464D";
+export const greySecondary = "#efefef"; //"#797979";
+export const greyPrimary = "#989898";
+export const lightGrey = "#C4C4C4";
+export const textWhite = "#ffffff";
+export const textWhite01 = "rgba(255, 255, 255, 0.1)";
+export const active = "#f6a508";
+export const active07 = "rgba(246, 165, 8, 0.7)";
