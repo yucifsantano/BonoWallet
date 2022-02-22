@@ -18,6 +18,19 @@ export function CustomButton({
   onPress,
   Icon,
   iconPosition,
+}:{
+  loading?:any;
+  type?:any;
+  children?:any;
+  disabled?:any;
+  isLarge?:any;
+  style?:any;
+  textSize?:any;
+  textStyle?:any;
+  textColor?:any;
+  onPress?:any;
+  Icon?:any;
+  iconPosition?:any;
 }) {
   return (
     <TouchableOpacity

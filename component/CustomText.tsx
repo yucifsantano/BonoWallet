@@ -12,6 +12,13 @@ export function CustomText({
   align,
   children,
   ...props
+}:{
+  type?:any;
+  size?:number | any;
+  color?:string | any;
+  style?:any;
+  align?:string | any;
+  children?:any;
 }) {
   const setFontType = (type) => {
     switch (type) {
