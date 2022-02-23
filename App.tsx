@@ -1,5 +1,5 @@
-import React from 'react';
-// import React, { useState, useEffect } from 'react';
+//import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { useFonts } from '@expo-google-fonts/inter';
@@ -9,6 +9,8 @@ import { RootNavigator } from './navigation/RootNavigator';
 import { createReduxStore } from './sdk/helper';
 import reducers from './store';
 import { dark } from './styles/color.theme';
+
+import * as Linking from 'expo-linking';
 
 const store = createReduxStore(reducers);
 
@@ -21,32 +23,30 @@ export default function App() {
   // TODO: Add deep link for universal links
   //*** INICIO DE COMENTARIOS */
 
-  //import * as Linking from 'expo-linking';
+  const prefix = Linking.createURL('/');
 
-  //const prefix = Linking.createURL('/');
+  const [data, setData] = useState(null);
 
-  //const [data, setData] = useState(null);
-
-  //const getInitialUrl = async () => {
-  //  const initialUrl = await Linking.getInitialURL();
-  //  if (initialUrl) setData(Linking.parse(initialUrl));
-  //};
+  const getInitialUrl = async () => {
+    const initialUrl = await Linking.getInitialURL();
+    if (initialUrl) setData(Linking.parse(initialUrl));
+  };
   
-  //useEffect(() => {
-  //   Linking.addEventListener("url", handleDeepLink);
-  //   if (!data) {
-  //     getInitialUrl();
-  //   }
+  useEffect(() => {
+     Linking.addEventListener("url", handleDeepLink);
+     if (!data) {
+       getInitialUrl();
+     }
   
-  //   return (() => {
-  //     Linking.removeEventListener("url", handleDeepLink);
-  //   });
-  //}, []);
+     return (() => {
+       Linking.removeEventListener("url", handleDeepLink);
+     });
+  }, []);
   
-  //const handleDeepLink = (event) => {
-  //   const data = Linking.parse(event.url);
-  //   setData(data);
-  //};
+  const handleDeepLink = (event) => {
+     const data = Linking.parse(event.url);
+     setData(data);
+  };
 
   //*** FINAL DE COMENTARIOS */
 
