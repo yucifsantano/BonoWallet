@@ -19,10 +19,10 @@ export default function App() {
     'Play-Bold': require('./assets/fonts/Play-Bold.ttf'),
     'Play-Regular': require('./assets/fonts/Play-Regular.ttf'),
   });
-
+  
   // TODO: Add deep link for universal links
   //*** INICIO DE COMENTARIOS */
-
+  
   const prefix = Linking.createURL('/');
 
   const [data, setData] = useState(null);
@@ -50,7 +50,7 @@ export default function App() {
 
   //*** FINAL DE COMENTARIOS */
 
-
+  console.log("Paso 6");
   return (
     <Provider store={store}>
       <SafeAreaView style={styles.container}>
