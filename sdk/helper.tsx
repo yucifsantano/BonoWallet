@@ -13,6 +13,7 @@ import { MONTHS_LIST } from '../styles/constants';
 
 // redux
 export const createReduxStore = _configureStore;
+
 function _configureStore(reducers) {
   let middleware = [ReduxPromise, thunk];
 
@@ -68,7 +69,7 @@ export const getStyle = (styles, animatedStyles, depend) => useMemo(
 // navigation
 export const navigationRef = createNavigationContainerRef();
 
-export function navigate({name, params}:{name:never, params:never}) {
+export function navigate({name, params}:{name:never, params?:never}) {
   if (navigationRef.isReady()) {
     navigationRef.navigate<never>(name, params);
   }
@@ -81,11 +82,11 @@ export function replace(name, params) {
 }
 
 // storage managing
-export async function saveToDeviceStorage(key, value, options) {
+export async function saveToDeviceStorage(key, value, options?) {
   await SecureStore.setItemAsync(key, value, options);
 }
 
-export async function getValueFromDeviceStorage(key, options) {
+export async function getValueFromDeviceStorage(key, options?) {
   return await SecureStore.getItemAsync(key, options);
 }
 
