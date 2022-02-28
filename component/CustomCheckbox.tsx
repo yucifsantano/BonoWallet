@@ -4,7 +4,7 @@ import { View, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { CustomText } from './CustomText';
 import { CheckBoxIcon } from './Icons';
-import { textWhite, active, greySecondary } from '../styles/color.theme';
+import { textWhite, active, greySecondary, textDisable } from '../styles/color.theme';
 
 export function CustomCheckbox({
   disabled,

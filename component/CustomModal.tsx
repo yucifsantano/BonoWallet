@@ -6,7 +6,7 @@ import { CustomText } from './CustomText';
 import { CustomButton } from './CustomButton';
 import { CloseIcon } from './Icons';
 import { deviceSize } from '../sdk/helper';
-import { dark } from '../styles/color.theme';
+import { dark, textDisable } from '../styles/color.theme';
 import SuccessImage from '../assets/successImage.png';
 import Types from '../store/modal/types';
 

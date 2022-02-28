@@ -54,7 +54,7 @@ export function CustomButton({
           <CustomText
             size={textSize}
             type={"bold"}
-            color={textColor ? textColor : (type === "transparent") ? "textDisable" : "textWhite"}
+            color={textColor ? textColor : (type === "transparent") ? textDisable : "textWhite"}
             align={"center"}
             style={textStyle}
           >

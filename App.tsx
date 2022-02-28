@@ -37,7 +37,7 @@ export default function App() {
      if (!data) {
        getInitialUrl();
      }
-  
+ 
      return (() => {
        Linking.removeEventListener("url", handleDeepLink);
      });
@@ -50,7 +50,6 @@ export default function App() {
 
   //*** FINAL DE COMENTARIOS */
 
-  console.log("Paso 6");
   return (
     <Provider store={store}>
       <SafeAreaView style={styles.container}>

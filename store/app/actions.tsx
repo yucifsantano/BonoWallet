@@ -64,7 +64,6 @@ export const checkSecure = () => async (dispatch) => {
 
     dispatch({ type: Types.CHANGE_IS_LOCAL_AUTHENTICATED, payload: !(!!isPasscodeExist) });
   } catch (e) {
-    console.error(e);
     dispatch(showModalAction({
       type: "error",
       text: "Ha habido un problema al descargar los datos.",

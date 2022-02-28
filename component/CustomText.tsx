@@ -73,7 +73,7 @@ export function CustomText({
 CustomText.propTypes = {
   type: PropTypes.oneOf(["bold", "regular"]),
   size: PropTypes.number,
-  color: PropTypes.oneOf(["greyPrimary", "greySecondary", "active", "danger", "success", "white01", "textWhite"]),
+  color: PropTypes.oneOf(["greyPrimary", "greySecondary", "active", "danger", "success", "white01", "textWhite", "textDisable"]),
   style: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.object), PropTypes.object]),
   align: PropTypes.oneOf(["left", "right", "center"]),
 };
